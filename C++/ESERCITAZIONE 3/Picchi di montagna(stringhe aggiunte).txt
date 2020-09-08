@@ -1,0 +1,19 @@
+	int idr=0,maxc=0;
+linea 22
+	for (int i=0; i<dim; i++)
+		{maxc=0;
+		idr=0;
+		for (int j=0; j<dim; j++)
+			{if(A[i][j]>maxc)
+				{maxc=A[i][j];
+				idr=j;
+				}
+		}
+		b=false;
+		for(int k=0;k<dim;k++)
+			{if(maxc<A[k][idr])
+				{b=true;
+				break;
+				}
+		}
+		if(b==false)cout<<"Picco "<<maxc<<" in posizione ["<<i+1<<"] ["<<idr+1<<"]"<<endl;
